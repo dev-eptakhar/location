@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Hey dude!Age caculate</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "meaw";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Your Age " + position.coords.latitude + 
+  "<br>Your Grand Father Age " + position.coords.longitude;
+  Haha just fun!!
+}
+</script>
+
+</body>
+</html>
